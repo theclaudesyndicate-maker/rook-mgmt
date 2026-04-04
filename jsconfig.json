@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "What import alias would you like configured? › @/*": ["./src/*"]
+    }
+  }
+}
