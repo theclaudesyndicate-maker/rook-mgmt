@@ -30,12 +30,20 @@ const innerStyle = {
 export default function Home() {
   return (
     <main style={pageStyle}>
+      <style>{`
+        @media (max-width: 640px) {
+          .home-logo {
+            width: min(50rem, 110vw) !important;
+          }
+        }
+      `}</style>
       <section aria-label="Home" style={mainStyle}>
         <div style={innerStyle}>
           <img
             src="/logo/rook-mgmt-logo.png"
             alt="ROOK MGMT LLC logo"
             loading="eager"
+            className="home-logo"
             style={{
               width: "min(50rem, 86vw)",
               height: "auto",

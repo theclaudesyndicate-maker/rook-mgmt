@@ -29,9 +29,25 @@ const paragraphStyle = {
 export default function MissionPage() {
   return (
     <main>
-      <section aria-label="Mission" style={mainStyle}>
-        <article style={articleStyle}>
-          <p style={paragraphStyle}>
+      <style>{`
+        @media (max-width: 640px) {
+          .mission-section {
+            padding-top: 4.5rem !important;
+          }
+          .mission-article {
+            width: 90% !important;
+            gap: 1.3rem !important;
+          }
+          .mission-p {
+            font-size: 0.84rem !important;
+            line-height: 1.76 !important;
+            color: #111 !important;
+          }
+        }
+      `}</style>
+      <section aria-label="Mission" className="mission-section" style={mainStyle}>
+        <article className="mission-article" style={articleStyle}>
+          <p className="mission-p" style={paragraphStyle}>
             ROOK MGMT is built to develop and sustain a portfolio of independent
             ventures. We provide the legal structure, financial discipline, and
             operational infrastructure that let creative and commercial work stay
@@ -39,7 +55,7 @@ export default function MissionPage() {
             in the foreground.
           </p>
 
-          <p style={paragraphStyle}>
+          <p className="mission-p" style={paragraphStyle}>
             Each venture we hold carries its own identity, its own team, and
             its own market relationship. Our role is not to direct the work. It
             is to make the foundation sound, then step back. Across every
@@ -47,7 +63,7 @@ export default function MissionPage() {
             precision in agreements, and clarity between partners.
           </p>
 
-          <p style={paragraphStyle}>
+          <p className="mission-p" style={paragraphStyle}>
             Our founders bring almost three decades of combined experience in
             film, television, music videos, and global campaigns, fields built
             on cross-disciplinary collaboration, logistical precision, and the
